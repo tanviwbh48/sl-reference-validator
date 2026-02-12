@@ -1,0 +1,10 @@
+{
+  "intent": "Transfer",
+  "context": {
+    "balance": 5000
+  },
+  "constraints": [
+    { "field": "balance", "value": 5000 }
+  ],
+  "outcome": "Allowed"
+}

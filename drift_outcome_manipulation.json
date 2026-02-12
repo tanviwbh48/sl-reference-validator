@@ -1,0 +1,12 @@
+{
+  "actor": "User_003",
+  "intent": "Transfer",
+  "context": {
+    "balance": 100
+  },
+  "constraints": [
+    { "field": "balance", "value": 5000 }
+  ],
+  "outcome": "Allowed"
+}
+

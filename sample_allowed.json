@@ -1,0 +1,13 @@
+{
+  "actor": "User_001",
+  "intent": "Transfer",
+  "context": {
+    "balance": 5000,
+    "verified": true
+  },
+  "constraints": [
+    { "field": "verified", "value": true },
+    { "field": "balance", "value": 5000 }
+  ],
+  "outcome": "Allowed"
+}
