@@ -1,5 +1,6 @@
 from grammar import (
     REQUIRED_PRIMITIVES,
+    OPTIONAL_PRIMITIVES,
     CANONICAL_ORDER,
     VALID_OUTCOMES
 )
@@ -47,6 +48,15 @@ def validate_structure(sentence: dict) -> None:
             raise StructuralValidationError(
                 "SF-01",
                 f"Missing required primitive: {primitive}"
+            )
+
+    # -------- Unknown Primitive Detection --------
+    valid_primitives = set(REQUIRED_PRIMITIVES + OPTIONAL_PRIMITIVES)
+    for key in sentence.keys():
+        if key not in valid_primitives:
+            raise StructuralValidationError(
+                "SF-11",
+                f"Unknown primitive: {key}"
             )
 
     # -------- Primitive Type Enforcement --------
